@@ -1,0 +1,5 @@
+{
+    "box": "./packages/box/index.js",
+    "button": "./packages/button/index.js",
+    "message": "./packages/button/index.js"
+}
