@@ -4,13 +4,15 @@
   "description": "基于 vue 实现的新 netiler-ui 库",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "vue-cli-service serve ./examples/main.js",
     "build:lib": "webpack --config build/webpack.config.js",
     "build:theme": "node build/bin/generate-cssfile && gulp build --gulpfile src/packages/theme-chalk/gulpfile.js && cp-cli src/packages/theme-chalk/lib lib/theme-chalk",
     "build": "npm run build:lib && npm run build:theme"
   },
-  "author": "ultravires",
+  "author": {
+    "name": "ultravires",
+    "email": "x555666777@qq.com"
+  },
   "license": "ISC",
   "devDependencies": {
     "@vue/cli-service": "~4.3.0",
@@ -27,8 +29,8 @@
     "webpack-cli": "^4.7.2"
   },
   "dependencies": {
-    "normalize.css": "^8.0.1",
     "vue": "^2.6.12",
     "webpack": "^4.46.0"
-  }
+  },
+  "keywords": ["NetilerUI"]
 }
