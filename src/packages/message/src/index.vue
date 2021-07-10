@@ -9,7 +9,7 @@
       :style="positionStyles"
       v-show="visible"
     >
-    <i :class="typeClasses"></i>
+    <i class="nt-icon nt-message__icon" :class="typeClasses"></i>
     <slot><p>{{ message }}</p></slot>
     </div>
   </transition>
@@ -41,7 +41,7 @@ export default {
 
   computed: {
     typeClasses() {
-      return this.type && `nt-message__icon nt-icon-${ typeMap[this.type] }`;
+      return this.type && `nt-icon-${ typeMap[this.type] }`;
     },
     positionStyles() {
       return {

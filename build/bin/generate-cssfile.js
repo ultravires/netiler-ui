@@ -17,7 +17,7 @@ function fileExists(filePath) {
 
 themes.forEach((theme) => {
   var isStyl = theme !== 'theme-default';
-  var indexContent = isStyl ? '@import "./normalize.styl";\n' : '@import "./normalize.css";\n';
+  var indexContent = isStyl ? '@import "./base.styl";\n' : '@import "./base.css";\n';
   Components.forEach(function(key) {
     if (['icon', 'option', 'option-group'].indexOf(key) > -1) return;
     var fileName = key + (isStyl ? '.styl' : '.css');
