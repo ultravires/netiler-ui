@@ -32,5 +32,5 @@
     "vue": "^2.6.12",
     "webpack": "^4.46.0"
   },
-  "keywords": ["NetilerUI"]
+  "keywords": ["NetilerUI", "netiler-ui", "netiler"]
 }
