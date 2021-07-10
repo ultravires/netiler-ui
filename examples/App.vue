@@ -2,18 +2,23 @@
   <div id="app">
     <!-- 按钮组件 -->
     <nt-button
+      type="success"
+      circle
       @click="handleBtnClick('success')">
       成功
     </nt-button>
     <nt-button
+      type="danger"
       @click="handleBtnClick('error')">
       错误
     </nt-button>
     <nt-button
+      type="warning"
       @click="handleBtnClick('warning')">
       警告
     </nt-button>
     <nt-button
+      type="info"
       @click="handleBtnClick('info')">
       信息
     </nt-button>
