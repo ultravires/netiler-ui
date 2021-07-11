@@ -1,44 +1,72 @@
 <template>
   <div id="app">
-    <!-- 按钮组件 -->
-    <nt-button
-      type="success"
-      icon="nt-icon nt-icon-success"
-      @click="handleBtnClick('success')">
-      成功
-    </nt-button>
-    <nt-button
-      type="danger"
-      icon="nt-icon nt-icon-error"
-      @click="handleBtnClick('error')">
-      错误
-    </nt-button>
-    <nt-button
-      type="warning"
-      icon="nt-icon nt-icon-warning"
-      @click="handleBtnClick('warning')">
-      警告
-    </nt-button>
-    <nt-button
-      type="info"
-      icon="nt-icon nt-icon-info"
-      @click="handleBtnClick('info')">
-      信息
-    </nt-button>
+    <div class="container">
+      <!-- 按钮组件 -->
+      <nt-button
+        type="success"
+        icon="nt-icon nt-icon-success"
+        @click="handleBtnClick('success')">
+        成功
+      </nt-button>
+      <nt-button
+        type="danger"
+        icon="nt-icon nt-icon-error"
+        @click="handleBtnClick('error')">
+        错误
+      </nt-button>
+      <nt-button
+        type="warning"
+        icon="nt-icon nt-icon-warning"
+        @click="handleBtnClick('warning')">
+        警告
+      </nt-button>
+      <nt-button
+        type="info"
+        icon="nt-icon nt-icon-info"
+        @click="handleBtnClick('info')">
+        信息
+      </nt-button>
+      <nt-button
+        round
+        icon="nt-icon nt-icon-info"
+      >
+        圆角
+      </nt-button>
+      <nt-button
+        circle
+        icon="nt-icon nt-icon-info"
+      >
+      </nt-button>
+    </div>
 
-    <!-- 盒子组件 -->
-    <nt-box
-      class="container"
-      title="演习资料"
-      more="更多》"
-      @more-click="handleMoreClick">
-      <!-- 列表组件 - 事件代理模式 -->
-      <nt-list :order="false" start="5" @item-click="handleListItemClick">
-        <nt-list-item v-for="item in 10" :key="item">
-          该列表组件支持事件代理模式，可优化代码速度;该列表组件支持事件代理模式，可优化代码速度
-        </nt-list-item>
-      </nt-list>
-    </nt-box>
+    <div class="container">
+      <!-- 盒子组件 -->
+      <nt-box
+        class="box-container"
+        title="最新推荐"
+        more="更多》"
+        @more-click="handleMoreClick">
+        <!-- 列表组件 - 事件代理模式 -->
+        <nt-list :order="false" start="5" @item-click="handleListItemClick">
+          <nt-list-item v-for="item in 10" :key="item">
+            该列表组件支持事件代理模式，可优化代码速度;该列表组件支持事件代理模式，可优化代码速度
+          </nt-list-item>
+        </nt-list>
+      </nt-box>
+    </div>
+
+    <div class="container">
+      <!-- 画像组件 -->
+      <nt-figure
+        src="https://cube.elemecdn.com/6/94/4d3ea53c084bad6931a56d5158a48jpeg.jpeg"
+        alt="画像"
+        img-width="auto"
+        img-height="90px"
+        caption="新建文档文本.txt"
+        align="center"
+      >
+      </nt-figure>
+    </div>
   </div>
 </template>
 
@@ -88,37 +116,32 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
+body {
+  padding: 20px;
+}
+
 .container {
+  margin: 10px;
+}
+</style>
+
+<style scoped>
+.box-container {
   width: 400px;
 }
 
-
 /* ===================== */
+
+.nt-button + .nt-button {
+  margin-left: 6px;
+}
+
 .nt-box {
-  background-color: rgba(0, 163, 255, .75);
-  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAAGXcA1uAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAGKADAAQAAAABAAAAGAAAAADB/VeXAAAAaklEQVRIDWP8////ZgYoYIIxQDQKh5EMZTgNI0oCxUaidKA4mEY6cLoK2T5kNk5HIStCZg8HDaOhhByjuNjDIaZp7weS0xKu4MYlTrIXcBmES3zUAlwhAxcfDSJ4UOBijAYRrpCBi9M8iACzrRokmF9omgAAAABJRU5ErkJggg==);
-  border-radius: 6px;
-  border: 1px solid #fff;
-  overflow: hidden;
-}
-
-.nt-box >>> .nt-box__header {
-  padding: 0 10px;
-  background-image: linear-gradient(90deg,#509ce4,#8fc2e8);
-}
-
-.nt-box >>> .nt-box__content {
-  padding: 10px;
-}
-
-.nt-list {
-  margin: 0;
-  padding: 0;
+  border: 1px solid #000;
 }
 
 .nt-list >>> .nt-list__item {
-  list-style: none;
   padding: 10px 0;
   white-space: nowrap;
   text-overflow: ellipsis;
