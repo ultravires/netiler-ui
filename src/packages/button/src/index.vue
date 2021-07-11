@@ -1,5 +1,10 @@
 <template>
-  <button class="nt-button" :class="getComputedClass" @click="handleClick">
+  <button
+    class="nt-button"
+    :class="getComputedClass"
+    @click="handleClick"
+  >
+    <i v-if="icon" :class="icon"></i>
     <slot></slot>
   </button>
 </template>
@@ -23,6 +28,10 @@ export default {
     circle: {
       type: Boolean,
       default: false
+    },
+    icon: {
+      type: String,
+      default: ''
     }
   },
 

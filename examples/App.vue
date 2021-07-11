@@ -3,24 +3,27 @@
     <!-- 按钮组件 -->
     <nt-button
       type="success"
-      circle
+      icon="nt-icon nt-icon-success"
       @click="handleBtnClick('success')">
-      <i class="nt-icon nt-icon-success"></i> 成功
+      成功
     </nt-button>
     <nt-button
       type="danger"
+      icon="nt-icon nt-icon-error"
       @click="handleBtnClick('error')">
-      <i class="nt-icon nt-icon-error"></i> 错误
+      错误
     </nt-button>
     <nt-button
       type="warning"
+      icon="nt-icon nt-icon-warning"
       @click="handleBtnClick('warning')">
-      <i class="nt-icon nt-icon-warning"></i> 警告
+      警告
     </nt-button>
     <nt-button
       type="info"
+      icon="nt-icon nt-icon-info"
       @click="handleBtnClick('info')">
-      <i class="nt-icon nt-icon-info"></i> 信息
+      信息
     </nt-button>
 
     <!-- 盒子组件 -->
@@ -32,7 +35,7 @@
       <!-- 列表组件 - 事件代理模式 -->
       <nt-list :order="false" start="5" @item-click="handleListItemClick">
         <nt-list-item v-for="item in 10" :key="item">
-          该列表组件支持事件代理模式，可优化代码速度该列表组件支持事件代理模式，可优化代码速度
+          该列表组件支持事件代理模式，可优化代码速度;该列表组件支持事件代理模式，可优化代码速度
         </nt-list-item>
       </nt-list>
     </nt-box>
