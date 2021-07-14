@@ -1,0 +1,25 @@
+.nt-image
+  position: relative
+  display: inline-block
+  overflow: hidden
+
+.nt-image__inner,
+.nt-image__error,
+.nt-image__placeholder
+  width: 100%
+  height: 100%
+  vertical-align: middle
+
+.nt-image__error,
+.nt-image__placeholder
+  display: flex
+  justify-content: center
+  align-items: center
+  background-color: #f2f2f2
+  color: #b1b1b1
+
+.nt-image__placeholder
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
