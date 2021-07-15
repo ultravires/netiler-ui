@@ -2,7 +2,7 @@
  * 懒加载
  * @param {HTMLElement} parent 需要对内容进行懒加载的容器
  */
-export default function lazyLoad(parent = document.body) {
+ export default function lazyLoad(parent = document.body) {
   if (typeof IntersectionObserver === 'undefined') {
     console.warn('[lazyLoad] 当前浏览器版本不支持 `IntersectionObserver`.');
     return;
@@ -28,4 +28,4 @@ export default function lazyLoad(parent = document.body) {
     let image = images[i];
     intersectionObserver.observe(image);
   }
-};
+}

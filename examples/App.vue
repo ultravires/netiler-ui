@@ -89,7 +89,11 @@
         <nt-image width="208px" height="130px"></nt-image>
         <!-- 自定义加载错误显示内容 -->
         <nt-image width="208px" height="130px">
-          <div class="nt-image__error" slot="error">加载图片失败了哦~</div>
+          <div class="nt-image__error" slot="error">哎呀，图片加载失败了</div>
+        </nt-image>
+        <!-- 懒加载 -->
+        <nt-image src="http://p4.qhimg.com/bdm/480_296_0/t01ea7e536d03740b30.jpg" lazy width="208px" height="130px">
+          <div class="nt-image__placeholder" slot="placeholder">正在进行懒加载...</div>
         </nt-image>
       </div>
     </div>
@@ -268,6 +272,8 @@ body {
 
 <style scoped>
 .box-container {
+  display: inline-block;
+  margin: 0 10px;
   width: 360px;
 }
 

@@ -1,14 +1,14 @@
 <template>
   <div class="nt-box">
-    <header class="nt-box__header">
-      <slot name="header">
-        <h3>
-          <i></i>
-          {{ title }}
-        </h3>
-        <span v-if="more" @click="handleMoreClick">{{ more }}</span>
-      </slot>
-    </header>
+    <slot name="header">
+      <header class="nt-box__header">
+          <h3>
+            <i></i>
+            {{ title }}
+          </h3>
+          <span v-if="more" @click="handleMoreClick">{{ more }}</span>
+      </header>
+    </slot>
     <div class="nt-box__content">
       <slot></slot>
     </div>

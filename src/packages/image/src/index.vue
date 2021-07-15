@@ -26,6 +26,9 @@
 </template>
 
 <script>
+import { isString, isHtmlElement } from '@/utils/types';
+import { getScrollContainer } from '@/utils/dom';
+
 export default {
   name: 'NtImage',
 
@@ -83,10 +86,12 @@ export default {
       parent = null;
       this.isLoading = false;
       this.isError = true;
+      this.$emit('error', event);
     },
 
     handleLoad() {
       this.isLoading = false;
+      this.isError = false;
     },
 
     loadImage() {
@@ -94,7 +99,39 @@ export default {
     },
 
     addLazyLoadListener() {
-      // TODO 懒加载实现
+      let scrollContainer = this.scrollContainer;
+      let _scrollContainer = null;
+      if (isHtmlElement(scrollContainer)) {
+        _scrollContainer = scrollContainer;
+      } else if (isString(scrollContainer)) {
+        _scrollContainer = document.querySelector(scrollContainer);
+      } else {
+        _scrollContainer = getScrollContainer(this.$el);
+      }
+
+      if (_scrollContainer) {
+        this._scrollContainer = _scrollContainer;
+        if (typeof IntersectionObserver === 'undefined') {
+          console.warn('[lazyLoad] 当前浏览器版本不支持 `IntersectionObserver`.');
+          return;
+        };
+        const image = this.$el.firstChild;
+        const intersectionObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const src = entry.target.dataset.src;
+              entry.target.src = src;
+              observer.unobserve(entry.target);
+            }
+          })
+        }, {
+          root: _scrollContainer,
+          rootMargin: '0px 0px 0px 0px',
+          threshold: [0]
+        });
+
+        intersectionObserver.observe(image);
+      }
     }
   }
 };
