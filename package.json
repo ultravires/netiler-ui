@@ -15,6 +15,7 @@
   },
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.14.6",
     "@vue/cli-service": "~4.3.0",
     "babel-loader": "^8.2.2",
     "cp-cli": "^2.0.0",
