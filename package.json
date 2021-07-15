@@ -1,6 +1,6 @@
 {
   "name": "netiler-ui",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "基于 vue 实现的新 netiler-ui 库",
   "main": "index.js",
   "scripts": {
