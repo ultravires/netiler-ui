@@ -3,6 +3,7 @@
     "button": "./packages/button/index.js",
     "figure": "./packages/figure/index.js",
     "image": "./packages/image/index.js",
+    "layout": "./packages/layout/index.js",
     "list": "./packages/list/index.js",
     "list-item": "./packages/list-item/index.js",
     "message": "./packages/button/index.js"

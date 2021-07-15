@@ -1,5 +1,10 @@
 <template>
   <div id="app">
+    <!-- 布局组件 -->
+    <nt-layout type="flex" :gap="[0, 20]" justify="center" align="center">
+      <div style="background-color: red;">Flex</div>
+      <div style="background-color: blue;">Layout</div>
+    </nt-layout>
     <h2>按钮组件</h2>
     <div class="container">
       <!-- 按钮组件 -->
