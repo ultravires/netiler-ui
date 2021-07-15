@@ -92,9 +92,18 @@
           <div class="nt-image__error" slot="error">哎呀，图片加载失败了</div>
         </nt-image>
         <!-- 懒加载 -->
-        <nt-image src="http://p4.qhimg.com/bdm/480_296_0/t01ea7e536d03740b30.jpg" lazy width="208px" height="130px">
-          <div class="nt-image__placeholder" slot="placeholder">正在进行懒加载...</div>
-        </nt-image>
+        <nt-box class="box-container" title="图片懒加载" more="" style="height: 200px;">
+          <nt-image
+            :src="image"
+            lazy
+            width="208px"
+            height="130px"
+            v-for="(image, index) in images"
+            :key="index"
+          >
+            <div class="nt-image__placeholder" slot="placeholder">正在进行懒加载...</div>
+          </nt-image>
+        </nt-box>
       </div>
     </div>
 
@@ -142,7 +151,14 @@ export default {
 
   data() {
     return {
-      BaiduImage
+      BaiduImage,
+      images: [
+        'http://p1.qhimg.com/bdm/960_593_0/t01ab30fb7d486430a7.jpg',
+        'http://p8.qhimg.com/bdm/480_296_0/t011b329f2e0b5232a8.jpg',
+        'http://p4.qhimg.com/bdm/480_296_0/t012cde4a5058c156b7.jpg',
+        'http://p4.qhimg.com/bdm/480_296_0/t01ea7e536d03740b30.jpg',
+        'http://p7.qhimg.com/bdm/480_296_0/t013396c95cc389701e.jpg'
+      ]
     }
   },
 
@@ -272,7 +288,6 @@ body {
 
 <style scoped>
 .box-container {
-  display: inline-block;
   margin: 0 10px;
   width: 360px;
 }

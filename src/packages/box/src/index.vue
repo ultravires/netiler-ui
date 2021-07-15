@@ -2,8 +2,10 @@
   <div class="nt-box">
     <slot name="header">
       <header class="nt-box__header">
-          <h3>
-            <i></i>
+          <h3 class="title">
+            <span v-if="icon" class="nt-box__preffix">
+              <i :class="icon"></i>
+            </span>
             {{ title }}
           </h3>
           <span v-if="more" @click="handleMoreClick">{{ more }}</span>
@@ -27,6 +29,10 @@ export default {
     more: {
       type: String,
       default: '更多》'
+    },
+    icon: {
+      type: String,
+      default: ''
     }
   },
 
