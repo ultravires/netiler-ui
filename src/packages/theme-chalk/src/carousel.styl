@@ -1,5 +1,16 @@
 .nt-carousel
   position: relative
+  .nt-carousel__container
+    position: relative
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: center
+    width: 100%
+    height: 100%
+    overflow: hidden
+  &.is-vertical .nt-carousel__container
+    flex-direction: column
 
 .nt-carousel__control
   position: absolute
@@ -18,7 +29,7 @@
   font-size: 12px
   transition: transform .3s ease
   transform: translateY(-50%)
-  z-index: 1
+  z-index: 10
   cursor: pointer
   &:hover
     background-color: rgba(0, 0, 0, .2)
@@ -30,14 +41,6 @@
 .nt-carousel__control--next
   right: 16px;
 
-.nt-carousel__container
-  display: flex
-  justify-content: flex-start
-  align-items: center
-  width: 100%
-  height: 100%
-  overflow: hidden
-
 .nt-carousel__indicators
   position: absolute
   bottom: 0
@@ -45,6 +48,7 @@
   padding: 10px 0
   margin: 0
   transform: translateX(-50%)
+  z-index: 10
   .nt-carousel__indicator
     display: inline-block
     width: 10px

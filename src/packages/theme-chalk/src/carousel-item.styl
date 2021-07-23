@@ -1,5 +1,11 @@
 .nt-carousel__item
+  position: absolute
+  top: 0
+  left: 0
   flex-shrink: 0
   width: 100%
   height: 100%
   transition: transform .3s ease
+  z-index: 1
+  &.is-active
+    z-index: 2

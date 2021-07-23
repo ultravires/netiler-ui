@@ -13,10 +13,12 @@
             <nt-carousel
               class="nt-demo__carousel"
               height="320px"
-              :default-index="1"
+              :default-index="2"
               :loop="true"
+              direction="horizontal"
               trigger="hover"
               type="card"
+              @change="handleCarouselChange"
             >
               <nt-carousel-item v-for="(image, index) in images" :key="index">
                 <nt-image
@@ -222,6 +224,11 @@ export default {
     },
     handleListItemClick(index) {
       alert(index);
+    },
+    handleCarouselChange(idx, oldIdx) {
+    //   if (idx === oldIdx) {
+    //     this.$message.warning('已经是最后一张了！');
+    //   }
     }
   }
 };

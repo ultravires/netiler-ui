@@ -45,6 +45,11 @@ export default {
       type: Number,
       default: 0
     },
+    direction: {
+      type: String,
+      default: 'horizontal',
+      validator: (val) => ['horizontal', 'vertical'].includes(val)
+    },
     height: {
       type: String,
       default: ''
@@ -77,6 +82,16 @@ export default {
       const classes = ['nt-carousel'];
       if (this.type) {
         classes.push(`nt-carousel--${this.type}`);
+      }
+      if (this.direction) {
+        classes.push(`is-${this.direction}`);
+      }
+      return classes;
+    },
+    indicatorClasses() {
+      const classes = ['nt-carousel__indicators'];
+      if (this.type) {
+        classes.push(`nt-carousel__indicators--${this.type}`);
       }
       return classes;
     }
