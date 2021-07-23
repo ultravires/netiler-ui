@@ -1,7 +1,11 @@
 {
+    "aside": "./packages/aside/index.js",
     "box": "./packages/box/index.js",
     "button": "./packages/button/index.js",
+    "carousel": "./packages/carousel/index.js",
+    "carousel-item": "./packages/carousel-item/index.js",
     "figure": "./packages/figure/index.js",
+    "header": "./packages/header/index.js",
     "image": "./packages/image/index.js",
     "layout": "./packages/layout/index.js",
     "list": "./packages/list/index.js",

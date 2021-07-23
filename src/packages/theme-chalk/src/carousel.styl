@@ -1,0 +1,60 @@
+.nt-carousel
+  position: relative
+
+.nt-carousel__control
+  position: absolute
+  top: 50%
+  padding: 0
+  margin: 0
+  width: 32px
+  height: 32px
+  line-height: 32px
+  background-color: rgba(0, 0, 0, .1)
+  border: none
+  border-radius: 50%
+  color: #eee
+  outline: none
+  text-align: center
+  font-size: 12px
+  transition: transform .3s ease
+  transform: translateY(-50%)
+  z-index: 1
+  cursor: pointer
+  &:hover
+    background-color: rgba(0, 0, 0, .2)
+    color: #fff
+
+.nt-carousel__control--prev
+  left: 16px
+
+.nt-carousel__control--next
+  right: 16px;
+
+.nt-carousel__container
+  display: flex
+  justify-content: flex-start
+  align-items: center
+  width: 100%
+  height: 100%
+  overflow: hidden
+
+.nt-carousel__indicators
+  position: absolute
+  bottom: 0
+  left: 50%
+  padding: 10px 0
+  margin: 0
+  transform: translateX(-50%)
+  .nt-carousel__indicator
+    display: inline-block
+    width: 10px
+    height: 10px
+    background-color: #eee
+    border-radius: 50%
+    transition: transform .3s ease
+    cursor: pointer
+    &:hover,
+    &.is-actived
+      background-color: #fff
+    & + .nt-carousel__indicator
+      margin-left: 12px

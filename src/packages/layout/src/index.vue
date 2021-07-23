@@ -11,12 +11,11 @@ export default {
   props: {
     type: {
       type: String,
-      default: '',
-      validator: (val) => (['flex', 'grid'].includes(val))
+      default: ''
     },
     gap: {
       type: [Array, Number],
-      default: ''
+      default: null
     },
     justify: {
       type: String,
@@ -30,7 +29,7 @@ export default {
 
   computed: {
     classes() {
-      return `nt-layout--${this.type}`;
+      return this.type && `nt-layout--${this.type}`;
     },
     styles() {
       const styles = {};
@@ -41,8 +40,8 @@ export default {
       } else {
         rowGap = colGap = this.gap;
       }
-      styles['row-gap'] = rowGap + 'px';
-      styles['column-gap'] = colGap + 'px';
+      styles['row-gap'] = !rowGap ? rowGap : rowGap + 'px';
+      styles['column-gap'] = !colGap ? colGap : colGap + 'px';
       if (this.justify) {
         this.type === 'flex'
           ? styles['justify-content'] = this.justify

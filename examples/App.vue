@@ -1,138 +1,168 @@
 <template>
   <div id="app">
     <!-- 布局组件 -->
-    <nt-layout type="flex" :gap="[0, 20]" justify="center" align="center">
-      <div style="background-color: red;">Flex</div>
-      <div style="background-color: blue;">Layout</div>
+    <nt-layout type="flex" :gap="[0, 20]">
+      <nt-aside width="300px">侧边栏</nt-aside>
+      <nt-layout>
+        <nt-header height="66px">
+          头部
+        </nt-header>
+        <main>
+          <section>
+            <h2>轮播组件</h2>
+            <nt-carousel
+              class="nt-demo__carousel"
+              height="320px"
+              :default-index="1"
+              :loop="true"
+              trigger="hover"
+              type="card"
+            >
+              <nt-carousel-item v-for="(image, index) in images" :key="index">
+                <nt-image
+                  :src="image"
+                  width="100%"
+                  height="100%"
+                  fit="cover"
+                  alt="图像"
+                ></nt-image>
+              </nt-carousel-item>
+            </nt-carousel>
+            <h2>按钮组件</h2>
+            <div class="container">
+              <!-- 按钮组件 -->
+              <nt-button
+                type="success"
+                icon="nt-icon nt-icon-success"
+                @click="handleBtnClick('success')">
+                成功
+              </nt-button>
+              <nt-button
+                type="danger"
+                icon="nt-icon nt-icon-error"
+                @click="handleBtnClick('error')">
+                错误
+              </nt-button>
+              <nt-button
+                type="warning"
+                icon="nt-icon nt-icon-warning"
+                @click="handleBtnClick('warning')">
+                警告
+              </nt-button>
+              <nt-button
+                type="info"
+                icon="nt-icon nt-icon-info"
+                @click="handleBtnClick('info')">
+                信息
+              </nt-button>
+              <nt-button
+                round
+                icon="nt-icon nt-icon-info"
+              >
+                圆角
+              </nt-button>
+              <nt-button
+                circle
+                icon="nt-icon nt-icon-info"
+              >
+              </nt-button>
+            </div>
+
+            <h2>列表组件</h2>
+            <div class="container">
+              <!-- 盒子组件 -->
+              <nt-box
+                class="box-container"
+                title="最新推荐"
+                more="更多》"
+                @more-click="handleMoreClick">
+                <!-- 列表组件 - 事件代理模式 -->
+                <nt-list :order="false" start="5" @item-click="handleListItemClick">
+                  <nt-list-item v-for="item in 5" :key="item">
+                    该列表组件支持事件代理模式，可优化代码速度;
+                  </nt-list-item>
+                </nt-list>
+              </nt-box>
+              <!-- 自定义头部 -->
+              <nt-box
+                class="box-container"
+                @more-click="handleMoreClick">
+                <header class="nt-box__header" slot="header">
+                  <h3>自定义头部</h3>
+                  <span>
+                    <nt-button
+                      circle
+                      icon="nt-icon nt-icon-info"
+                    >
+                    </nt-button>
+                  </span>
+                </header>
+                <!-- 列表组件 - 事件代理模式 -->
+                <nt-list :order="false" start="5" @item-click="handleListItemClick">
+                  <nt-list-item v-for="item in 5" :key="item">
+                    该列表组件支持事件代理模式，可优化代码速度;
+                  </nt-list-item>
+                </nt-list>
+              </nt-box>
+            </div>
+
+            <h2>图片组件</h2>
+            <div class="container">
+              <div class="imgs-box">
+                <!-- 基础用法 -->
+                <nt-image :src="BaiduImage" width="208px" height="130px" fit="fill"></nt-image>
+                <!-- 正在加载 -->
+                <nt-image src="http://p8.qhimg.com/bdm/480_296_0/t011b329f2e0b5232a8.jpg" width="208px" height="130px"></nt-image>
+                <!-- 加载错误 -->
+                <nt-image width="208px" height="130px"></nt-image>
+                <!-- 自定义加载错误显示内容 -->
+                <nt-image width="208px" height="130px">
+                  <div class="nt-image__error" slot="error">
+                    哎，图片加载失败了
+                  </div>
+                </nt-image>
+                <div class="container">
+                  <!-- 懒加载 -->
+                  <nt-box class="box-container" title="图片懒加载" more="" style="height: 300px;">
+                    <nt-image
+                      :src="image"
+                      lazy
+                      width="208px"
+                      height="130px"
+                      v-for="(image, index) in images"
+                      :key="index"
+                    >
+                      <div class="nt-image__placeholder" slot="placeholder">正在进行懒加载...</div>
+                    </nt-image>
+                  </nt-box>
+                </div>
+              </div>
+            </div>
+
+            <h2>画像组件</h2>
+            <div class="container">
+              <!-- 画像组件 -->
+              <a
+                href="https://www.baidu.com" 
+                v-for="item in 4"
+                :key="item"
+              >
+                <nt-figure
+                  :src="BaiduImage"
+                  alt="画像"
+                  img-width="208px"
+                  img-height="130px"
+                  caption="百度"
+                  align="center"
+                >
+                </nt-figure>
+              </a>
+            </div>
+          </section>
+        </main>
+        <footer>底部</footer>
+      </nt-layout>
     </nt-layout>
-    <h2>按钮组件</h2>
-    <div class="container">
-      <!-- 按钮组件 -->
-      <nt-button
-        type="success"
-        icon="nt-icon nt-icon-success"
-        @click="handleBtnClick('success')">
-        成功
-      </nt-button>
-      <nt-button
-        type="danger"
-        icon="nt-icon nt-icon-error"
-        @click="handleBtnClick('error')">
-        错误
-      </nt-button>
-      <nt-button
-        type="warning"
-        icon="nt-icon nt-icon-warning"
-        @click="handleBtnClick('warning')">
-        警告
-      </nt-button>
-      <nt-button
-        type="info"
-        icon="nt-icon nt-icon-info"
-        @click="handleBtnClick('info')">
-        信息
-      </nt-button>
-      <nt-button
-        round
-        icon="nt-icon nt-icon-info"
-      >
-        圆角
-      </nt-button>
-      <nt-button
-        circle
-        icon="nt-icon nt-icon-info"
-      >
-      </nt-button>
-    </div>
-
-    <h2>列表组件</h2>
-    <div class="container">
-      <!-- 盒子组件 -->
-      <nt-box
-        class="box-container"
-        title="最新推荐"
-        more="更多》"
-        @more-click="handleMoreClick">
-        <!-- 列表组件 - 事件代理模式 -->
-        <nt-list :order="false" start="5" @item-click="handleListItemClick">
-          <nt-list-item v-for="item in 5" :key="item">
-            该列表组件支持事件代理模式，可优化代码速度;
-          </nt-list-item>
-        </nt-list>
-      </nt-box>
-      <!-- 自定义头部 -->
-      <nt-box
-        class="box-container"
-        @more-click="handleMoreClick">
-        <header class="nt-box__header" slot="header">
-          <h3>自定义头部</h3>
-          <span>
-            <nt-button
-              circle
-              icon="nt-icon nt-icon-info"
-            >
-            </nt-button>
-          </span>
-        </header>
-        <!-- 列表组件 - 事件代理模式 -->
-        <nt-list :order="false" start="5" @item-click="handleListItemClick">
-          <nt-list-item v-for="item in 5" :key="item">
-            该列表组件支持事件代理模式，可优化代码速度;
-          </nt-list-item>
-        </nt-list>
-      </nt-box>
-    </div>
-
-    <h2>图片组件</h2>
-    <div class="container">
-      <div class="imgs-box">
-        <!-- 基础用法 -->
-        <nt-image :src="BaiduImage" width="208px" height="130px" fit="fill"></nt-image>
-        <!-- 正在加载 -->
-        <nt-image src="http://p8.qhimg.com/bdm/480_296_0/t011b329f2e0b5232a8.jpg" width="208px" height="130px"></nt-image>
-        <!-- 加载错误 -->
-        <nt-image width="208px" height="130px"></nt-image>
-        <!-- 自定义加载错误显示内容 -->
-        <nt-image width="208px" height="130px">
-          <div class="nt-image__error" slot="error">哎呀，图片加载失败了</div>
-        </nt-image>
-        <div class="container">
-          <!-- 懒加载 -->
-          <nt-box class="box-container" title="图片懒加载" more="" style="height: 300px;">
-            <nt-image
-              :src="image"
-              lazy
-              width="208px"
-              height="130px"
-              v-for="(image, index) in images"
-              :key="index"
-            >
-              <div class="nt-image__placeholder" slot="placeholder">正在进行懒加载...</div>
-            </nt-image>
-          </nt-box>
-        </div>
-      </div>
-    </div>
-
-    <h2>画像组件</h2>
-    <div class="container">
-      <!-- 画像组件 -->
-      <a
-        href="https://www.baidu.com" 
-        v-for="item in 4"
-        :key="item"
-      >
-        <nt-figure
-          :src="BaiduImage"
-          alt="画像"
-          img-width="208px"
-          img-height="130px"
-          caption="百度"
-          align="center"
-        >
-        </nt-figure>
-      </a>
-    </div>
   </div>
 </template>
 
@@ -295,6 +325,15 @@ body {
 </style>
 
 <style scoped>
+/* Carousel - std */
+.nt-demo__carousel {
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Carousel - end */
+
+
 .box-container {
   margin: 0 10px;
   width: 360px;
