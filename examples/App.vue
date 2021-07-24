@@ -19,6 +19,7 @@
               trigger="hover"
               type="card"
               @change="handleCarouselChange"
+              @end="handleCarouselEnd"
             >
               <nt-carousel-item v-for="(image, index) in images" :key="index">
                 <nt-image
@@ -229,6 +230,9 @@ export default {
     //   if (idx === oldIdx) {
     //     this.$message.warning('已经是最后一张了！');
     //   }
+    },
+    handleCarouselEnd(activedIndex) {
+      this.$message.warning(`兄弟，你到头了啊！(${activedIndex})`);
     }
   }
 };

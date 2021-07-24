@@ -152,6 +152,14 @@ export default {
       this.setActivedItem(this.activedIndex + 1);
     },
 
+    /**
+     * 当到头之后再次点击左右控制器的触发事件（第一张或最后一张）
+     */
+    end(index) {
+      alert(1);
+      this.$emit('end', index);
+    },
+
     updateItems() {
       this.items = this.$children.filter(child => child.$options.name === 'NtCarouselItem');
     },
