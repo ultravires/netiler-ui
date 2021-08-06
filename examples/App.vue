@@ -15,6 +15,7 @@
               height="320px"
               :default-index="2"
               :loop="true"
+              controls="never"
               direction="horizontal"
               trigger="hover"
               type="card"

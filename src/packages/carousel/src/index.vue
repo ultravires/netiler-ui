@@ -41,6 +41,11 @@ export default {
       type: Boolean,
       default: true
     },
+    controls: {
+      type: Boolean,
+      default: 'always',
+      validator: (val) => ['never', 'hover', 'always'].includes(val)
+    },
     defaultIndex: {
       type: Number,
       default: 0

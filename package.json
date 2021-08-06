@@ -2,8 +2,9 @@
   "name": "netiler-ui",
   "version": "1.0.1",
   "description": "基于 vue 实现的新 netiler-ui 库",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
+    "test": "jest",
     "serve": "vue-cli-service serve ./examples/main.js",
     "build:lib": "webpack --config build/webpack.config.js",
     "build:theme": "node build/bin/generate-cssfile && gulp build --gulpfile src/packages/theme-chalk/gulpfile.js && cp-cli src/packages/theme-chalk/lib lib/theme-chalk",
@@ -23,6 +24,7 @@
     "gulp-autoprefixer": "^8.0.0",
     "gulp-cssmin": "^0.2.0",
     "gulp-stylus": "^2.7.0",
+    "jest": "^27.0.6",
     "progress-bar-webpack-plugin": "^2.1.0",
     "terser-webpack-plugin": "^4.2.3",
     "tslib": "^2.3.0",
