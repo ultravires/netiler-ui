@@ -41,7 +41,7 @@
     "netiler-ui",
     "netiler"
   ],
-  "files": ["lib/**/*", "docs/**/*", "src/**/*"],
+  "files": ["lib/**/*", "build/**/*","docs/**/*", "src/**/*"],
   "repository": {
     "type": "git",
     "url": "https://github.com/ultravires/netiler-ui"
