@@ -36,6 +36,16 @@
             <div class="container">
               <!-- 按钮组件 -->
               <nt-button
+                type="primary"
+              >
+                主要按钮
+              </nt-button>
+              <nt-button
+                type="default"
+              >
+                默认按钮
+              </nt-button>
+              <nt-button
                 type="success"
                 icon="nt-icon nt-icon-success"
                 @click="handleBtnClick('success')">

@@ -32,6 +32,14 @@ export default {
     icon: {
       type: String,
       default: ''
+    },
+    plain: {
+      type: Boolean,
+      default: false
+    },
+    ghost: {
+      type: Boolean,
+      default: false
     }
   },
 

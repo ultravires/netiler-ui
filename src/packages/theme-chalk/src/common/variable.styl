@@ -16,14 +16,45 @@ $--border-radius-circle = 50%;
 $--color-white = #fff;
 $--color-black = #000;
 
+$--color-primary = #24a6f8;
+$--color-muted = #777;
+$--color-secondary = #d7d7db;
 $--color-success = #67c23a;
 $--color-info = #909399;
 $--color-warning = #e6a23c;
 $--color-danger = #f56c6c;
 $--color-error = #f56c6c;
 
+$--color-primary-light-1 = lighten($--color-primary, 20%);
+$--color-success-light-1 = lighten($--color-success, 20%);
+$--color-info-light-1 = lighten($--color-info, 20%);
+$--color-warning-light-1 = lighten($--color-warning, 20%);
+$--color-danger-light-1 = lighten($--color-danger, 20%);
+$--color-error-light-1 = lighten($--color-error, 20%);
+
+$--color-primary-light = lighten($--color-primary, 80%);
 $--color-success-light = lighten($--color-success, 80%);
 $--color-info-light = lighten($--color-info, 80%);
 $--color-warning-light = lighten($--color-warning, 80%);
 $--color-danger-light = lighten($--color-danger, 80%);
 $--color-error-light = lighten($--color-error, 80%);
+
+/* Padding
+-------------------------- */
+$--padding-horizontal = .75em;
+$--padding-vertical = .375em;
+
+/* Button
+-------------------------- */
+$--button-primary-color = $--color-primary;
+$--button-default-color = rgb(239, 239, 239);
+$--button-success-color = $--color-success;
+$--button-info-color = $--color-info;
+$--button-warning-color = $--color-warning;
+$--button-danger-color = $--color-danger;
+$--button-hover-primary-color = $--color-primary-light-1;
+$--button-hover-default-color = $--color-primary-light;
+$--button-hover-success-color = $--color-success-light-1;
+$--button-hover-info-color = $--color-info-light-1;
+$--button-hover-warning-color = $--color-warning-light-1;
+$--button-hover-danger-color = $--color-danger-light-1;
