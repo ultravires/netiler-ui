@@ -25,36 +25,71 @@ $--color-warning = #e6a23c;
 $--color-danger = #f56c6c;
 $--color-error = #f56c6c;
 
-$--color-primary-light-1 = lighten($--color-primary, 20%);
-$--color-success-light-1 = lighten($--color-success, 20%);
-$--color-info-light-1 = lighten($--color-info, 20%);
-$--color-warning-light-1 = lighten($--color-warning, 20%);
-$--color-danger-light-1 = lighten($--color-danger, 20%);
-$--color-error-light-1 = lighten($--color-error, 20%);
+$--color-primary-light-1 = lighten($--color-primary, 10%);
+$--color-success-light-1 = lighten($--color-success, 10%);
+$--color-info-light-1 = lighten($--color-info, 10%);
+$--color-warning-light-1 = lighten($--color-warning, 10%);
+$--color-danger-light-1 = lighten($--color-danger, 10%);
+$--color-error-light-1 = lighten($--color-error, 10%);
 
-$--color-primary-light = lighten($--color-primary, 80%);
-$--color-success-light = lighten($--color-success, 80%);
-$--color-info-light = lighten($--color-info, 80%);
-$--color-warning-light = lighten($--color-warning, 80%);
-$--color-danger-light = lighten($--color-danger, 80%);
-$--color-error-light = lighten($--color-error, 80%);
+$--color-primary-light-2 = lighten($--color-primary, 20%);
+$--color-success-light-2 = lighten($--color-success, 20%);
+$--color-info-light-2 = lighten($--color-info, 20%);
+$--color-warning-light-2 = lighten($--color-warning, 20%);
+$--color-danger-light-2 = lighten($--color-danger, 20%);
+$--color-error-light-2 = lighten($--color-error, 20%);
+
+$--color-primary-light-8 = lighten($--color-primary, 80%);
+$--color-success-light-8 = lighten($--color-success, 80%);
+$--color-info-light-8 = lighten($--color-info, 80%);
+$--color-warning-light-8 = lighten($--color-warning, 80%);
+$--color-danger-light-8 = lighten($--color-danger, 80%);
+$--color-error-light-8 = lighten($--color-error, 80%);
+
+$--color-primary-light-9 = lighten($--color-primary, 90%);
+$--color-success-light-9 = lighten($--color-success, 90%);
+$--color-info-light-9 = lighten($--color-info, 90%);
+$--color-warning-light-9 = lighten($--color-warning, 90%);
+$--color-danger-light-9 = lighten($--color-danger, 90%);
+$--color-error-light-9 = lighten($--color-error, 90%);
 
 /* Padding
 -------------------------- */
-$--padding-horizontal = .75em;
-$--padding-vertical = .375em;
+$--padding-middle = .75em;
+$--padding-middle-half = $--padding-middle / 2;
+
+$--padding-large = 1em;
+$--padding-large-half = $--padding-large / 2;
 
 /* Button
 -------------------------- */
-$--button-primary-color = $--color-primary;
+/* 一般按钮 */
 $--button-default-color = rgb(239, 239, 239);
+$--button-primary-color = $--color-primary;
 $--button-success-color = $--color-success;
 $--button-info-color = $--color-info;
 $--button-warning-color = $--color-warning;
 $--button-danger-color = $--color-danger;
-$--button-hover-primary-color = $--color-primary-light-1;
-$--button-hover-default-color = $--color-primary-light;
-$--button-hover-success-color = $--color-success-light-1;
-$--button-hover-info-color = $--color-info-light-1;
-$--button-hover-warning-color = $--color-warning-light-1;
-$--button-hover-danger-color = $--color-danger-light-1;
+$--button-error-color = $--color-error;
+/* 一般按钮 hover */
+$--button-default-hover-color = $--color-primary-light-9;
+$--button-primary-hover-color = $--color-primary-light-2;
+$--button-success-hover-color = $--color-success-light-2;
+$--button-info-hover-color = $--color-info-light-2;
+$--button-warning-hover-color = $--color-warning-light-2;
+$--button-danger-hover-color = $--color-danger-light-2;
+
+/* 朴素按钮 */
+$--plain-button-default-color = rgb(239, 239, 239);
+$--plain-button-primary-color = $--color-primary-light-9;
+$--plain-button-success-color = $--color-success-light-9;
+$--plain-button-info-color = $--color-info-light-9;
+$--plain-button-warning-color = $--color-warning-light-9;
+$--plain-button-danger-color = $--color-danger-light-9;
+/* 朴素按钮 hover */
+$--plain-button-default-hover-color = rgb(239, 239, 239);
+$--plain-button-primary-hover-color = $--color-primary;
+$--plain-button-success-hover-color = $--color-success;
+$--plain-button-info-hover-color = $--color-info;
+$--plain-button-warning-hover-color = $--color-warning;
+$--plain-button-danger-hover-color = $--color-danger;

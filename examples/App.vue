@@ -35,15 +35,11 @@
             <h2>按钮组件</h2>
             <div class="container">
               <!-- 按钮组件 -->
-              <nt-button
-                type="primary"
-              >
-                主要按钮
-              </nt-button>
-              <nt-button
-                type="default"
-              >
+              <nt-button type="default">
                 默认按钮
+              </nt-button>
+              <nt-button type="primary">
+                主要按钮
               </nt-button>
               <nt-button
                 type="success"
@@ -52,16 +48,16 @@
                 成功
               </nt-button>
               <nt-button
-                type="danger"
-                icon="nt-icon nt-icon-error"
-                @click="handleBtnClick('error')">
-                错误
-              </nt-button>
-              <nt-button
                 type="warning"
                 icon="nt-icon nt-icon-warning"
                 @click="handleBtnClick('warning')">
                 警告
+              </nt-button>
+              <nt-button
+                type="danger"
+                icon="nt-icon nt-icon-error"
+                @click="handleBtnClick('error')">
+                危险
               </nt-button>
               <nt-button
                 type="info"
@@ -69,17 +65,154 @@
                 @click="handleBtnClick('info')">
                 信息
               </nt-button>
+            </div>
+            <div class="container">
+              <!-- 按钮组件 -->
+              <nt-button plain type="default">
+                朴素按钮
+              </nt-button>
+              <nt-button plain type="primary">
+                主要按钮
+              </nt-button>
+              <nt-button
+                plain
+                type="success"
+                icon="nt-icon nt-icon-success"
+                @click="handleBtnClick('success')">
+                成功
+              </nt-button>
+              <nt-button
+                plain
+                type="warning"
+                icon="nt-icon nt-icon-warning"
+                @click="handleBtnClick('warning')">
+                警告
+              </nt-button>
+              <nt-button
+                plain
+                type="danger"
+                icon="nt-icon nt-icon-error"
+                @click="handleBtnClick('error')">
+                危险
+              </nt-button>
+              <nt-button
+                plain
+                type="info"
+                icon="nt-icon nt-icon-info"
+                @click="handleBtnClick('info')">
+                信息
+              </nt-button>
+            </div>
+            <div class="container">
+              <!-- 按钮组件 -->
+              <nt-button ghost type="default">
+                幽灵按钮
+              </nt-button>
+              <nt-button ghost type="primary">
+                主要按钮
+              </nt-button>
+              <nt-button
+                ghost
+                type="success"
+                icon="nt-icon nt-icon-success"
+                @click="handleBtnClick('success')">
+                成功
+              </nt-button>
+              <nt-button
+                ghost
+                type="warning"
+                icon="nt-icon nt-icon-warning"
+                @click="handleBtnClick('warning')">
+                警告
+              </nt-button>
+              <nt-button
+                ghost
+                type="danger"
+                icon="nt-icon nt-icon-error"
+                @click="handleBtnClick('error')">
+                危险
+              </nt-button>
+              <nt-button
+                ghost
+                type="info"
+                icon="nt-icon nt-icon-info"
+                @click="handleBtnClick('info')">
+                信息
+              </nt-button>
+            </div>
+            <div class="container">
+              <!-- 按钮组件 -->
+              <nt-button round type="default">
+                圆角按钮
+              </nt-button>
+              <nt-button round type="primary">
+                主要按钮
+              </nt-button>
               <nt-button
                 round
-                icon="nt-icon nt-icon-info"
-              >
-                圆角
+                type="success"
+                icon="nt-icon nt-icon-success"
+                @click="handleBtnClick('success')">
+                成功
               </nt-button>
               <nt-button
-                circle
-                icon="nt-icon nt-icon-info"
-              >
+                round
+                type="warning"
+                icon="nt-icon nt-icon-warning"
+                @click="handleBtnClick('warning')">
+                警告
               </nt-button>
+              <nt-button
+                round
+                type="danger"
+                icon="nt-icon nt-icon-error"
+                @click="handleBtnClick('error')">
+                危险
+              </nt-button>
+              <nt-button
+                round
+                type="info"
+                icon="nt-icon nt-icon-info"
+                @click="handleBtnClick('info')">
+                信息
+              </nt-button>
+            </div>
+            <div class="container">
+              <!-- 按钮组件 -->
+              <nt-button
+                circle
+                type="default"
+                icon="nt-icon nt-icon-good"
+              ></nt-button>
+              <nt-button
+                circle
+                type="primary"
+                icon="nt-icon nt-icon-good"
+              ></nt-button>
+              <nt-button
+                circle
+                type="success"
+                icon="nt-icon nt-icon-good"
+                @click="handleBtnClick('success')"
+              ></nt-button>
+              <nt-button
+                circle
+                type="warning"
+                icon="nt-icon nt-icon-good"
+                @click="handleBtnClick('warning')"
+              ></nt-button>
+              <nt-button
+                circle
+                type="danger"
+                icon="nt-icon nt-icon-good"
+                @click="handleBtnClick('error')"
+              ></nt-button>
+              <nt-button
+                circle
+                type="info"
+                icon="nt-icon nt-icon-good"
+                @click="handleBtnClick('info')"
+              ></nt-button>
             </div>
 
             <h2>列表组件</h2>

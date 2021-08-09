@@ -42,7 +42,7 @@ export default {
       default: true
     },
     controls: {
-      type: Boolean,
+      type: String,
       default: 'always',
       validator: (val) => ['never', 'hover', 'always'].includes(val)
     },

@@ -1,59 +1,146 @@
 .nt-button
+  display: inline-block
+  padding: $--padding-middle-half $--padding-middle
   border: 1px solid transparent
-  padding: $--padding-vertical $--padding-horizontal
+  border-radius: $--border-radius-small;
   cursor: pointer
   line-height: 1
   &.is-round
     border-radius: $--border-radius-round
   &.is-circle
-    padding: $--padding-vertical
+    padding: $--padding-middle-half
     border-radius: $--border-radius-circle
-
-.nt-button--primary
-  background-color: $--button-primary-color
-  border-color: $--button-primary-color
-  color: $--color-white
-  &:hover
-    background-color: $--button-hover-primary-color
-    border-color: $--button-hover-primary-color
 
 .nt-button--default
   background-color: $--button-default-color
   border-color: $--button-default-color
   color: $--color-black
   &:hover
-    background-color: $--button-hover-default-color
+    background-color: $--button-default-hover-color
     border-color: $--button-primary-color
     color: $--button-primary-color
+  &.is-plain
+    background-color: $--plain-button-default-color
+    border-color: $--plain-button-default-hover-color
+    color: $--color-black
+    &:hover
+      background-color: $--plain-button-default-hover-color
+      border-color: $--button-primary-color
+      color: $--button-primary-color
+  &.is-ghost
+    background-color: transparent
+
+.nt-button--primary
+  background-color: $--button-primary-color
+  border-color: $--button-primary-color
+  color: $--color-white
+  &:hover
+    background-color: $--button-primary-hover-color
+    border-color: $--button-primary-hover-color
+  &.is-plain
+    background-color: $--plain-button-primary-color
+    border-color: $--plain-button-primary-hover-color
+    color: $--plain-button-primary-hover-color
+    &:hover
+      background-color: $--plain-button-primary-hover-color
+      border-color: $--plain-button-primary-hover-color
+      color: $--color-white
+  &.is-ghost
+    background-color: transparent
+    color: $--button-primary-color
+    &:hover
+      background-color: $--plain-button-primary-hover-color
+      border-color: $--plain-button-primary-hover-color
+      color: $--color-white
 
 .nt-button--success
   background-color: $--button-success-color
   border-color: $--button-success-color
   color: $--color-white
   &:hover
-    background-color: $--button-hover-success-color
-    border-color: $--button-hover-success-color
+    background-color: $--button-success-hover-color
+    border-color: $--button-success-hover-color
+  &.is-plain
+    background-color: $--plain-button-success-color
+    border-color: $--plain-button-success-hover-color
+    color: $--plain-button-success-hover-color
+    &:hover
+      background-color: $--plain-button-success-hover-color
+      border-color: $--plain-button-success-hover-color
+      color: $--color-white
+  &.is-ghost
+    background-color: transparent
+    color: $--button-success-color
+    &:hover
+      background-color: $--plain-button-success-hover-color
+      border-color: $--plain-button-success-hover-color
+      color: $--color-white
 
 .nt-button--info
   background-color: $--button-info-color
   border-color: $--button-info-color
   color: $--color-white
   &:hover
-    background-color: $--button-hover-info-color
-    border-color: $--button-hover-info-color
+    background-color: $--button-info-hover-color
+    border-color: $--button-info-hover-color
+  &.is-plain
+    background-color: $--plain-button-info-color
+    border-color: $--plain-button-info-hover-color
+    color: $--plain-button-info-hover-color
+    &:hover
+      background-color: $--plain-button-info-hover-color
+      border-color: $--plain-button-info-hover-color
+      color: $--color-white
+  &.is-ghost
+    background-color: transparent
+    color: $--button-info-color
+    &:hover
+      background-color: $--plain-button-info-hover-color
+      border-color: $--plain-button-info-hover-color
+      color: $--color-white
 
 .nt-button--warning
   background-color: $--button-warning-color
   border-color: $--button-warning-color
   color: $--color-white
   &:hover
-    background-color: $--button-hover-warning-color
-    border-color: $--button-hover-warning-color
+    background-color: $--button-warning-hover-color
+    border-color: $--button-warning-hover-color
+  &.is-plain
+    background-color: $--plain-button-warning-color
+    border-color: $--plain-button-warning-hover-color
+    color: $--plain-button-warning-hover-color
+    &:hover
+      background-color: $--plain-button-warning-hover-color
+      border-color: $--plain-button-warning-hover-color
+      color: $--color-white
+  &.is-ghost
+    background-color: transparent
+    color: $--button-warning-color
+    &:hover
+      background-color: $--plain-button-warning-hover-color
+      border-color: $--plain-button-warning-hover-color
+      color: $--color-white
 
 .nt-button--danger
   background-color: $--button-danger-color
   border-color: $--button-danger-color
   color: $--color-white
   &:hover
-    background-color: $--button-hover-danger-color
-    border-color: $--button-hover-danger-color
+    background-color: $--button-danger-hover-color
+    border-color: $--button-danger-hover-color
+  &.is-plain
+    background-color: $--plain-button-danger-color
+    border-color: $--plain-button-danger-hover-color
+    color: $--plain-button-danger-hover-color
+    &:hover
+      background-color: $--plain-button-danger-hover-color
+      border-color: $--plain-button-danger-hover-color
+      color: $--color-white
+  &.is-ghost
+    background-color: transparent
+    color: $--button-danger-color
+    &:hover
+      background-color: $--plain-button-danger-hover-color
+      border-color: $--plain-button-danger-hover-color
+      color: $--color-white

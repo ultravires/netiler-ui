@@ -49,9 +49,13 @@ export default {
       const typeClass = `nt-button--${this.type || 'default'}`;
       const isRound = this.round ? 'is-round' : null;
       const isCircle = this.circle ? 'is-circle' : null;
+      const isPlain = this.plain ? 'is-plain' : null;
+      const isGhost = this.ghost ? 'is-ghost' : null;
       classes.push(typeClass);
       isRound ? classes.push(isRound) : undefined;
       isCircle ? classes.push(isCircle) : undefined;
+      isPlain ? classes.push(isPlain) : undefined;
+      isGhost ? classes.push(isGhost) : undefined;
       return classes;
     }
   },
