@@ -6,6 +6,20 @@
   "description": "For NetilerUI",
   "glyphs": [
     {
+      "icon_id": "12898890",
+      "name": "caret_right",
+      "font_class": "caret-right",
+      "unicode": "e672",
+      "unicode_decimal": 58994
+    },
+    {
+      "icon_id": "10265867",
+      "name": "triangle",
+      "font_class": "triangle",
+      "unicode": "e61a",
+      "unicode_decimal": 58906
+    },
+    {
       "icon_id": "7712738",
       "name": "success",
       "font_class": "success",
@@ -127,7 +141,7 @@
     {
       "icon_id": "4933457",
       "name": "最小化",
-      "font_class": "zuixiaohua",
+      "font_class": "back-desktop",
       "unicode": "e772",
       "unicode_decimal": 59250
     },

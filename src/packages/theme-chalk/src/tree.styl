@@ -1,0 +1,23 @@
+.nt-tree
+  position: relative
+  cursor: default
+
+.nt-tree-node
+  white-space: nowrap
+  outline: none
+
+.nt-tree-node__content
+  display: flex
+  align-items: center
+
+.nt-tree-node__expand-icon
+  padding: 6px
+  color: #b1b1b1
+  font-size: 12px
+
+.nt-tree-node__expand-icon
+  &.expanded
+    transform: rotate(90deg)
+  &.is-leaf
+    color: transparent
+    cursor: default

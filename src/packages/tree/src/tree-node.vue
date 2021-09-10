@@ -29,6 +29,7 @@
         @click.stop="handleExpandIconClick"
         :class="[
           { 'is-leaf': node.isLeaf, expanded: !node.isLeaf && expanded },
+          'nt-icon',
           'nt-tree-node__expand-icon',
           tree.iconClass ? tree.iconClass : 'nt-icon-caret-right'
         ]"
