@@ -352,7 +352,12 @@ export default {
       treeData: [{
         label: '一级目录',
         children: [{
-          label: '二级目录'
+          label: '二级目录',
+          children: [{
+            label: '三级目录'
+          }]
+        }, {
+          label: '一级目录'
         }]
       }]
     }
