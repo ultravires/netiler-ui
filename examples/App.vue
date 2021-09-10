@@ -305,6 +305,11 @@
                 </nt-figure>
               </a>
             </div>
+
+            <h2>树组件</h2>
+            <div class="container">
+              <nt-tree :data="treeData"></nt-tree>
+            </div>
           </section>
         </main>
         <footer>底部</footer>
@@ -343,7 +348,13 @@ export default {
         'http://p4.qhimg.com/bdm/480_296_0/t012cde4a5058c156b7.jpg',
         'http://p4.qhimg.com/bdm/480_296_0/t01ea7e536d03740b30.jpg',
         'http://p7.qhimg.com/bdm/480_296_0/t013396c95cc389701e.jpg'
-      ]
+      ],
+      treeData: [{
+        label: '一级目录',
+        children: [{
+          label: '二级目录'
+        }]
+      }]
     }
   },
 

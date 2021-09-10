@@ -10,6 +10,7 @@ import Layout from './packages/layout/index.js';
 import ListItem from './packages/list-item/index.js';
 import List from './packages/list/index.js';
 import Message from './packages/message/index.js';
+import Tree from './packages/tree/index.js';
 
 const components = [
   Aside,
@@ -23,7 +24,8 @@ const components = [
   Layout,
   ListItem,
   List,
-  Message
+  Message,
+  Tree
 ];
 
 const install = function (Vue, opts = {}) {
@@ -51,6 +53,7 @@ export default {
   Layout,
   ListItem,
   List,
-  Message
+  Message,
+  Tree
 }
 

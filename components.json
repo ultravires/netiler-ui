@@ -10,5 +10,6 @@
     "layout": "./packages/layout/index.js",
     "list": "./packages/list/index.js",
     "list-item": "./packages/list-item/index.js",
-    "message": "./packages/button/index.js"
+    "message": "./packages/button/index.js",
+    "tree": "./packages/tree/index.js"
 }
